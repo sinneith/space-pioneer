@@ -1,0 +1,47 @@
+@keyframes move {
+    0%{ transform: scale(100%); transform-origin: right; }
+    50%{ transform: scale(125%); transform-origin: right; }
+    100%{ transform: scale(150%); transform-origin: right; }
+}
+
+@keyframes rightmove {
+    0%{ transform: scale(100%); transform-origin: left; }
+    50%{ transform: scale(125%); transform-origin: left; }
+    100%{ transform: scale(150%); transform-origin: left; }
+}
+
+@keyframes arrow{
+    0%{ transform: translateX(0); }
+    50%{ transform: translateX(10px); }
+    100%{ transform: translateX(0); }
+}
+
+@keyframes leftArrow{
+    0%{ transform: translateX(0); }
+    50%{ transform: translateX(-10px); }
+    100%{ transform: translateX(0); }
+}
+
+@keyframes title {
+    0%{ display: block; }
+    100%{ display: none; }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@keyframes gallery01 {
+    0%{ background-size: 100%; background-position-x: 20%; }
+    100%{ background-size: 150%; background-position-x: 70%; }
+}
+
+@keyframes gallery02 {
+    0%{ background-size: 180%; background-position-y: 10.5rem;  }
+    100%{ background-size: 230%; background-position-y: 14rem;  }
+}
+
+@keyframes gallery03 {
+    0%{ background-size: 100%; background-position-x: 30%; }
+    100%{ background-size: 150%; background-position-x: -60%; }
+}

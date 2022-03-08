@@ -1,0 +1,16 @@
+%titleBox{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem; box-sizing: border-box;
+}
+
+%titleP{
+    width: 50%; font-weight: 200; line-height: 3rem;
+}
+
+%titleArrow{
+    width: 100%; max-width: 100px;
+    position: absolute; bottom: 0; right: 3rem;
+}
