@@ -1,0 +1,431 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@100;200;300;400;500;600&display=swap");
+.group02 .box07 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.group02 .box07 p, .group01 .box05 p {
+  width: 50%;
+  font-weight: 200;
+  line-height: 3rem;
+}
+
+.group02 .box07 img, .group01 .box06 img {
+  width: 100%;
+  max-width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(100%);
+    transform-origin: right;
+  }
+  50% {
+    transform: scale(125%);
+    transform-origin: right;
+  }
+  100% {
+    transform: scale(150%);
+    transform-origin: right;
+  }
+}
+@keyframes rightmove {
+  0% {
+    transform: scale(100%);
+    transform-origin: left;
+  }
+  50% {
+    transform: scale(125%);
+    transform-origin: left;
+  }
+  100% {
+    transform: scale(150%);
+    transform-origin: left;
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes leftArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes title {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes gallery01 {
+  0% {
+    background-size: 100%;
+    background-position-x: 20%;
+  }
+  100% {
+    background-size: 150%;
+    background-position-x: 70%;
+  }
+}
+@keyframes gallery02 {
+  0% {
+    background-size: 180%;
+    background-position-y: 10.5rem;
+  }
+  100% {
+    background-size: 230%;
+    background-position-y: 14rem;
+  }
+}
+@keyframes gallery03 {
+  0% {
+    background-size: 100%;
+    background-position-x: 30%;
+  }
+  100% {
+    background-size: 150%;
+    background-position-x: -60%;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  width: 100%;
+  height: 100vh;
+  min-width: 1720px;
+  background-color: black;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+body .wrap_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+body .wrap {
+  padding: 1rem 0.5rem 0.5rem 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  position: absolute;
+  top: 0;
+}
+
+.container01 {
+  padding: 5rem 0 0 5rem;
+  font-family: "Teko", sans-serif;
+}
+.container01 h1 {
+  font-size: 12rem;
+  width: 60%;
+  line-height: 11rem;
+  margin-bottom: 5rem;
+}
+.container01 h1 span {
+  font-size: 7rem;
+}
+.container01 p {
+  font-weight: 100;
+  width: 70%;
+  line-height: 3.4rem;
+  letter-spacing: 0.1rem;
+}
+.container01 span {
+  animation: blink 1.3s step-end infinite;
+}
+
+.container02 {
+  display: grid;
+  gap: 0.5rem;
+  grid-template: "box01 box01 box01 box02 box02 box02 box03 box03 box03" 1fr "box01 box01 box01 box02 box02 box02 box03 box03 box03" 1fr "box01 box01 box01 box02 box02 box02 box03 box03 box03" 1fr "box01 box01 box01 box02 box02 box02 box03 box03 box03" 1fr "box01 box01 box01 box02 box02 box02 group01 group01 group01" 1fr "box01 box01 box01 box02 box02 box02 group01 group01 group01" 1fr "box01 box01 box01 box02 box02 box02 group02 group02 group02" 1fr "box01 box01 box01 box02 box02 box02 group02 group02 group02" 1fr "group03 group03 group03 group03 group03 box13 box13 box13 box13" 1fr "group03 group03 group03 group03 group03 box13 box13 box13 box13" 1fr/1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.container02 .box:not(.box03, .box13) {
+  background-color: black;
+}
+.container02 > div {
+  width: 100%;
+  height: 100%;
+}
+.container02 .group01, .container02 .group02, .container02 .group03 {
+  cursor: pointer;
+}
+
+.box01 {
+  grid-area: box01;
+}
+
+.box01, .box02 {
+  position: relative;
+  overflow: hidden;
+}
+.box01 img, .box02 img {
+  width: 100%;
+  height: 100%;
+  animation: move 25s linear infinite;
+  opacity: 0.7;
+}
+
+.box02 {
+  grid-area: box02;
+}
+.box02 img {
+  animation: rightmove 25s linear infinite;
+}
+
+.box03 {
+  grid-area: box03;
+  position: relative;
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  display: grid;
+  align-content: flex-end;
+  text-align: right;
+}
+.box03 p {
+  width: 60%;
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+}
+.box03 h3 {
+  font-weight: 500;
+  font-size: 8rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.box03 .line {
+  display: grid;
+  justify-self: right;
+  margin-right: 2rem;
+  width: 0.1rem;
+  height: 20rem;
+  background-color: white;
+}
+
+.group01 {
+  grid-area: group01;
+  display: grid;
+  gap: 0.5rem;
+  grid-template: "box04 box04 box05" 1fr "box04 box04 box06" 1fr/1fr 1fr 1fr;
+  background-color: black;
+}
+.group01 > div {
+  width: 100%;
+  height: 100%;
+}
+.group01:hover .box04 {
+  opacity: 1;
+}
+.group01:hover img {
+  animation: leftArrow 1s linear infinite;
+}
+.group01 .box04 {
+  grid-area: box04;
+  background-image: url("../img/03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+.group01 .box05 {
+  grid-area: box05;
+  display: grid;
+  place-content: center;
+  padding: 3rem 3rem 0 3rem;
+  box-sizing: border-box;
+}
+.group01 .box06 {
+  grid-area: box06;
+  position: relative;
+}
+.group01 .box06 img {
+  left: 3rem;
+}
+
+.group02 {
+  grid-area: group02;
+  display: grid;
+  gap: 0.5rem;
+  grid-template: "box07 box08 box08" 1fr "box07 box08 box08" 1fr/1fr 1fr 1fr;
+  background-color: black;
+}
+.group02 > div {
+  width: 100%;
+  height: 100%;
+}
+.group02 .box07 {
+  grid-area: box07;
+}
+.group02 .box08 {
+  grid-area: box08;
+  overflow: hidden;
+}
+.group02 .box08 video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.6;
+}
+.group02:hover img {
+  animation: arrow 1s linear infinite;
+}
+.group02:hover video {
+  opacity: 1;
+}
+
+.group03 {
+  grid-area: group03;
+  display: grid;
+  gap: 0.5rem;
+  grid-template: "box09 box09 box09 box10 box11 " 1fr "box09 box09 box09 box10 box12" 1fr/1fr 1fr 1fr 1fr 1fr;
+}
+.group03 > div {
+  width: 100%;
+  height: 100%;
+}
+.group03:hover .box09 {
+  animation: gallery01 2s linear both;
+}
+.group03:hover .box10 {
+  animation: gallery02 2s linear both;
+}
+.group03:hover .box10 img {
+  opacity: 1;
+}
+.group03:hover .box11 {
+  animation: gallery03 2s linear both;
+}
+.group03 .box09 {
+  grid-area: box09;
+  position: relative;
+  background-image: url("../img/04.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.group03 .box09 p {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translate(0, -50%);
+  font-size: 6rem;
+  font-weight: 100;
+}
+.group03 .box10 {
+  grid-area: box10;
+  background-image: url("../img/05.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 180%;
+  background-position: center -550%;
+  display: grid;
+  place-content: center;
+}
+.group03 .box10 img {
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.group03 .box11 {
+  grid-area: box11;
+  background-image: url("../img/06.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.group03 .box12 {
+  grid-area: box12;
+}
+
+.box13 {
+  grid-area: box13;
+}
+.box13 .bg_wrap {
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  width: 75%;
+  height: 100%;
+}
+.box13 .bg_wrap:hover .img_wrap {
+  opacity: 0.8;
+}
+.box13 .bg_wrap:hover p {
+  opacity: 1;
+}
+.box13 .bg_wrap .img_wrap {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("../img/07.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box13 .bg_wrap p {
+  width: 100%;
+  opacity: 0;
+  font-family: "Teko", sans-serif;
+  font-size: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.mutedBtn {
+  cursor: pointer;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../img/mute.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
