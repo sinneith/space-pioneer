@@ -9,13 +9,15 @@
   box-sizing: border-box;
 }
 
-.group02 .box07 p, .group01 .box05 p {
+.group02 .box07 p,
+.group01 .box05 p {
   width: 50%;
   font-weight: 200;
   line-height: 3rem;
 }
 
-.group02 .box07 img, .group01 .box06 img {
+.group02 .box07 img,
+.group01 .box06 img {
   width: 100%;
   max-width: 100px;
   position: absolute;
@@ -122,7 +124,8 @@ html {
 
 body {
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 3rem;
   width: 100%;
   height: 100vh;
@@ -186,7 +189,9 @@ body .wrap {
   width: 100%;
   height: 100%;
 }
-.container02 .group01, .container02 .group02, .container02 .group03 {
+.container02 .group01,
+.container02 .group02,
+.container02 .group03 {
   cursor: pointer;
 }
 
@@ -194,11 +199,13 @@ body .wrap {
   grid-area: box01;
 }
 
-.box01, .box02 {
+.box01,
+.box02 {
   position: relative;
   overflow: hidden;
 }
-.box01 img, .box02 img {
+.box01 img,
+.box02 img {
   width: 100%;
   height: 100%;
   animation: move 25s linear infinite;
@@ -338,7 +345,7 @@ body .wrap {
 .group03 .box09 {
   grid-area: box09;
   position: relative;
-  background-image: url("../img/04.jpeg");
+  background-image: url("../img/04.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
